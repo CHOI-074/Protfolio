@@ -54,12 +54,25 @@ const HeroSlider = () => {
                 </div>
 
                 {/* Visual Side */}
-                <div className="w-full md:w-1/2 relative flex items-center justify-center bg-gradient-to-br from-white/40 to-transparent">
-                  <div className="relative w-3/4 aspect-[4/3] bg-white rounded-xl shadow-2xl transform translate-x-12 translate-y-12 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform duration-700 border border-gray-100 p-4">
-                     <div className="w-full h-full bg-gray-50 rounded border border-dashed border-gray-200 flex flex-col items-center justify-center gap-4 text-gray-300">
+                <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 md:p-12">
+                  <div className="relative w-full h-full rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
+                    {project.image ? (
+                      <>
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                      </>
+                    ) : (
+                      // 이미지가 없을 때의 대체 화면
+                      <div className="w-full h-full bg-white flex flex-col items-center justify-center gap-4 text-gray-300">
                         <Monitor size={48} />
                         <span className="font-mono text-sm">UI Preview</span>
-                     </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 

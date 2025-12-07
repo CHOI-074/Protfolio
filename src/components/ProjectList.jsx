@@ -2,7 +2,7 @@
 // [File: src/components/ProjectList.jsx]
 // ==========================================
 import React from 'react';
-import { Layout, Github } from 'lucide-react';
+import { Layout, Github, Monitor } from 'lucide-react';
 import { ALL_PROJECTS } from '../data/mockData';
 
 const ProjectList = () => {
@@ -21,14 +21,27 @@ const ProjectList = () => {
               className={`flex flex-col md:flex-row gap-16 items-center group ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
             >
               {/* Image Section */}
-              <div className="w-full md:w-3/5">
-                <div className={`w-full aspect-[16/10] rounded-2xl overflow-hidden relative ${project.color} transition-all duration-500 hover:shadow-2xl hover:shadow-gray-200/50`}>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                     <Layout size={64} className="text-black/5 group-hover:scale-110 transition-transform duration-700" />
+              <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 md:p-12">
+                  <div className="relative w-full h-full rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
+                    {project.image ? (
+                      <>
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="w-full h-full object-cover"
+                        />
+                        {/* Overlay */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+                      </>
+                    ) : (
+                      // 이미지가 없을 때의 대체 화면
+                      <div className="w-full h-full bg-white flex flex-col items-center justify-center gap-4 text-gray-300">
+                        <Monitor size={48} />
+                        <span className="font-mono text-sm">UI Preview</span>
+                      </div>
+                    )}
                   </div>
-                  <div className="absolute inset-0 bg-black/0 hover:bg-black/5 transition-colors cursor-pointer" />
                 </div>
-              </div>
 
               {/* Text Section */}
               <div className="w-full md:w-2/5 flex flex-col justify-center">
