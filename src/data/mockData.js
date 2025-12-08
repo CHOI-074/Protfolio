@@ -2,6 +2,8 @@
 // [File: src/data/mockData.js]
 // ==========================================
 import uzetImage from '../assets/image/uzet_main.png';
+import KDTimage from '../assets/image/KDT_main.png';
+import finzImage from '../assets/image/finz_main.png';
 
 export const HIGHLIGHT_PROJECTS = [
   {
@@ -12,25 +14,27 @@ export const HIGHLIGHT_PROJECTS = [
     tags: ["Python FastAPI", "Implicit ALS", "Spring"],
     color: "bg-emerald-50",
     image: uzetImage,
-    objectFit: "contain"
+    objectFit: "cover"
   },
-  {
+{
     id: 2,
-    title: "Task Orchestrator",
-    category: "SaaS Application",
-    description: "실시간 협업이 가능한 프로젝트 관리 도구입니다. WebSocket을 이용한 즉각적인 상태 동기화와 드래그 앤 드롭 칸반 보드를 지원합니다.",
-    tags: ["React", "Socket.io", "Redux"],
-    color: "bg-slate-50",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2574&auto=format&fit=crop"
+    title: "슬기로운 은퇴생활",
+    category: "Social Impact & AI",
+    description: "KDT 해커톤 장관상 수상작. 5060 은퇴자를 위한 AI 기반 지역 정착 매칭 플랫폼입니다. Perplexity와 ChatGPT를 결합한 이중 파이프라인으로 할루시네이션을 최소화한 맞춤형 리포트를 제공합니다.",
+    tags: ["KDT 해커톤 장관상", "Generative AI", "Vue.js"],
+    color: "bg-teal-50",
+    image: KDTimage,
+    objectFit: "cover" 
   },
   {
     id: 3,
-    title: "Crypto Dashboard",
-    category: "Data Viz",
-    description: "복잡한 암호화폐 데이터를 실시간으로 시각화하는 대시보드입니다. WebGL 기반 차트 라이브러리를 사용하여 대량의 데이터도 부드럽게 렌더링합니다.",
-    tags: ["TypeScript", "Three.js", "GraphQL"],
-    color: "bg-gray-50",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop"
+    title: "FINZ",
+    category: "FinTech & Edu",
+    description: "MZ세대를 위한 AI 기반 맞춤형 금융 입문 플랫폼입니다. 실시간 시세 기반의 모의투자 시스템과 투자 성향 진단 알고리즘을 통해 자기주도적 금융 역량 강화를 지원합니다.",
+    tags: ["Spring Legacy", "Vue.js", "OpenAI API"], 
+    color: "bg-sky-50", 
+    image: finzImage,
+    objectFit: "cover"
   },
   
 ];
