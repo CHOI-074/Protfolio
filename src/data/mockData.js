@@ -3,7 +3,7 @@
 // ==========================================
 import uzetImage from '../assets/image/uzet_main.png';
 import KDTimage from '../assets/image/KDT_main.png';
-import finzImage from '../assets/image/finz_main.png';
+import finzImage from '../assets/image/Finz_main.png';
 
 export const HIGHLIGHT_PROJECTS = [
   {
