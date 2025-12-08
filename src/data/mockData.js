@@ -5,12 +5,12 @@
 export const HIGHLIGHT_PROJECTS = [
   {
     id: 1,
-    title: "Minimal Commerce",
-    category: "Full Stack",
-    description: "Headless CMS를 기반으로 구축한 초경량 이커머스 플랫폼입니다. Next.js의 SSG 기능을 활용해 로딩 속도를 0.5초 미만으로 단축했습니다.",
-    tags: ["Next.js", "Stripe", "Tailwind"],
-    color: "bg-stone-50",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+    title: "UZET",
+    category: "AI & FinTech",
+    description: "사용자 행동 패턴과 금융 데이터를 분석하여 개인 맞춤형 기능을 실시간으로 추천하는 AI 위젯입니다. Implicit ALS와 하이브리드 모델을 적용해 최적의 UX를 제공합니다.",
+    tags: ["Python FastAPI", "Implicit ALS", "Spring"],
+    color: "bg-emerald-50",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop"
   },
   {
     id: 2,
