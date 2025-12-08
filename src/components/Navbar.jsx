@@ -30,7 +30,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           >
             Projects
           </button>
-          <button
+          {/* <button
             onClick={() => setActiveTab('templates')}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
               activeTab === 'templates' 
@@ -39,7 +39,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             }`}
           >
             Templates
-          </button>
+          </button> */}
         </div>
 
         {/* Social / Contact */}
