@@ -1,10 +1,62 @@
 // ==========================================
 // [File: src/data/mockData.js]
+// *수정: PROFILE_DATA, SKILLS, PROFILE_PROJECTS에 export 키워드 추가*
 // ==========================================
+// NOTE: 로컬 이미지 경로는 이 환경에서 사용할 수 없으므로, 데이터 구조만 유지합니다.
+//       (App.jsx에서 이 데이터들을 직접 정의하거나 URL을 사용해야 합니다.)
 import uzetImage from '../assets/image/uzet_main.png';
 import KDTimage from '../assets/image/KDT_main.png';
 import finzImage from '../assets/image/Finz_main.png';
 import subwayImage from '../assets/image/subway_main.png';
+import Choi from '../assets/image/Choi_image.jpg';
+
+// export 키워드 추가
+export const PROFILE_DATA = {
+  name: "최창연 (ChangYun Choi)",
+  jobTitle: "Full-Stack Developer & Data Analyst",
+  description: "사용자 경험과 비즈니스 가치를 극대화하는 솔루션을 개발합니다. AI 기반 추천 시스템과 데이터 분석 역량을 기반으로 실제 문제 해결에 기여하는 프로덕트 개발에 주력하고 있습니다.",
+  email: "portfolio0704@naver.com",
+  phone: "010-3048-3452",
+  location: "Seoul, Republic of Korea",
+  profileImage: Choi,
+};
+
+// 2. 스킬 및 수상 리스트 (export 추가)
+export const SKILLS = [
+  { area: "Frontend", list: ["React", "Vue.js", "Tailwind CSS", "TypeScript"] },
+  { area: "Backend", list: ["Spring Boot", "Python FastAPI", "Node.js/Express", "MySQL/PostgreSQL"] },
+  { area: "AI/Data", list: ["Implicit ALS", "Generative AI (OpenAI, Gemini)", "Jupyter", "Pandas", "Geopandas"] },
+];
+
+// 3. Achievements & Key Projects: ID를 ALL_PROJECTS와 일치하도록 수정 (export 추가)
+export const PROFILE_PROJECTS = [
+  { 
+    id: 2, // ALL_PROJECTS의 '슬기로운 은퇴생활' ID
+    title: "슬기로운 은퇴생활", 
+    year: "2025", 
+    description: "5060 은퇴자를 위한 AI 기반 지역 정착 매칭 플랫폼 개발",
+    badge: "KDT 해커톤 장관상 수상작"
+  },
+  { 
+    id: 1, // ALL_PROJECTS의 'UZET' ID
+    title: "UZET", 
+    year: "2025", 
+    description: "사용자 행동 패턴 및 금융 데이터 기반 개인 맞춤형 AI 위젯 서비스 구현",
+    badge: "4등 / 266팀"
+  },
+  { 
+    id: 3, // ALL_PROJECTS의 'FINZ' ID
+    title: "FINZ", 
+    year: "2025", 
+    description: "MZ세대를 위한 AI 기반 맞춤형 금융 입문 플랫폼 개발 및 모의투자 시스템 구현" 
+  },
+  { 
+    id: 4, // ALL_PROJECTS의 'Metro Site Analysis' ID
+    title: "지하철 역 최적의 입지 분석 모델", 
+    year: "2023", 
+    description: "도시 공공 데이터와 GIS 기술을 활용한 최적 입지 선정 모델링 프로젝트 (AHP 기법)" 
+  },
+];
 
 export const HIGHLIGHT_PROJECTS = [
   {
@@ -37,7 +89,6 @@ export const HIGHLIGHT_PROJECTS = [
     image: finzImage,
     objectFit: "cover"
   },
-  
 ];
 
 export const ALL_PROJECTS = [
@@ -59,7 +110,8 @@ export const ALL_PROJECTS = [
     description: "개발 지식을 공유하는 개인 기술 블로그입니다. MDX를 지원하여 코드 스니펫과 인터랙티브 컴포넌트를 글 내부에 삽입할 수 있습니다.",
     tags: ["Gatsby", "MDX", "Emotion"],
     color: "bg-blue-50/50",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2574&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2574&auto=format&fit=crop",
+    objectFit: "cover"
   }
 ];
 

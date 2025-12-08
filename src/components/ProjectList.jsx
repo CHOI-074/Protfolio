@@ -1,11 +1,9 @@
-// ==========================================
-// [File: src/components/ProjectList.jsx]
-// ==========================================
-import React from 'react';
+
 import { Layout, Github, Monitor } from 'lucide-react';
 import { ALL_PROJECTS } from '../data/mockData';
 
-const ProjectList = () => {
+// ProjectList 컴포넌트가 props로 ref 객체를 받도록 업데이트합니다.
+const ProjectList = ({ projectRefs }) => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -15,12 +13,15 @@ const ProjectList = () => {
         </div>
 
         <div className="space-y-32">
+          {/* 각 프로젝트에 projectRefs를 연결하여 참조 가능하도록 설정 */}
           {ALL_PROJECTS.map((project, idx) => (
             <div 
               key={project.id} 
+              id={`project-${project.id}`} // 고유 ID 설정
+              ref={el => projectRefs.current[project.id] = el} // Ref 연결
               className={`flex flex-col md:flex-row gap-16 items-center group ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
             >
-              {/* Image Section */}
+              {/* 이미지 영역 */}
               <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 md:p-12">
                   <div className="relative w-full aspect-video rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
                     {project.image ? (
@@ -30,7 +31,7 @@ const ProjectList = () => {
                           alt={project.title} 
                           className="w-full h-full object-cover"
                         />
-                        {/* Overlay */}
+                        {/* 오버레이 */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
                       </>
                     ) : (
@@ -43,7 +44,7 @@ const ProjectList = () => {
                   </div>
                 </div>
 
-              {/* Text Section */}
+              {/* 텍스트 영역 */}
               <div className="w-full md:w-2/5 flex flex-col justify-center">
                 <div className="font-mono text-sm text-gray-400 mb-4">0{idx + 1} / 0{ALL_PROJECTS.length}</div>
                 <h4 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
@@ -75,5 +76,6 @@ const ProjectList = () => {
     </section>
   );
 };
+
 
 export default ProjectList;
