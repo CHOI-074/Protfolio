@@ -1,6 +1,7 @@
 // ==========================================
 // [File: src/data/mockData.js]
 // ==========================================
+import uzetImage from '../assets/image/uzet_main.png';
 
 export const HIGHLIGHT_PROJECTS = [
   {
@@ -10,7 +11,8 @@ export const HIGHLIGHT_PROJECTS = [
     description: "사용자 행동 패턴과 금융 데이터를 분석하여 개인 맞춤형 기능을 실시간으로 추천하는 AI 위젯입니다. Implicit ALS와 하이브리드 모델을 적용해 최적의 UX를 제공합니다.",
     tags: ["Python FastAPI", "Implicit ALS", "Spring"],
     color: "bg-emerald-50",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2670&auto=format&fit=crop"
+    image: uzetImage,
+    objectFit: "contain"
   },
   {
     id: 2,

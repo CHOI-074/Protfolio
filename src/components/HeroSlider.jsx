@@ -55,13 +55,13 @@ const HeroSlider = () => {
 
                 {/* Visual Side */}
                 <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 md:p-12">
-                  <div className="relative w-full h-full rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
+                  <div className="relative w-full aspect-video rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
                     {project.image ? (
                       <>
                         <img 
                           src={project.image} 
                           alt={project.title} 
-                          className="w-full h-full object-cover"
+                          className={`w-full h-full ${project.objectFit === 'contain' ? 'object-contain bg-white/50' : 'object-cover'}`}
                         />
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>

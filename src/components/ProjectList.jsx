@@ -22,7 +22,7 @@ const ProjectList = () => {
             >
               {/* Image Section */}
               <div className="w-full md:w-1/2 relative flex items-center justify-center p-6 md:p-12">
-                  <div className="relative w-full h-full rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
+                  <div className="relative w-full aspect-video rounded-xl shadow-2xl overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 border border-gray-100/50">
                     {project.image ? (
                       <>
                         <img 
