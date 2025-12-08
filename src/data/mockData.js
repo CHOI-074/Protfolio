@@ -4,6 +4,7 @@
 import uzetImage from '../assets/image/uzet_main.png';
 import KDTimage from '../assets/image/KDT_main.png';
 import finzImage from '../assets/image/Finz_main.png';
+import subwayImage from '../assets/image/subway_main.png';
 
 export const HIGHLIGHT_PROJECTS = [
   {
@@ -43,12 +44,13 @@ export const ALL_PROJECTS = [
   ...HIGHLIGHT_PROJECTS,
   {
     id: 4,
-    title: "AI Chat Interface",
-    category: "AI Integration",
-    description: "자연어 처리 모델을 연동한 챗봇 인터페이스입니다. 스트리밍 응답 처리를 통해 실제 대화하는 듯한 사용자 경험을 제공합니다.",
-    tags: ["OpenAI API", "React Query", "Vercel"],
-    color: "bg-orange-50/50",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop"
+    title: "Metro Site Analysis",
+    category: "Data Science & GIS",
+    description: "도시 공공 데이터(인구, 상권, 교통)와 GIS 기술을 활용하여 최적의 지하철역 입지를 선정하는 분석 모델링 프로젝트입니다. AHP 기법을 통해 정량적 입지 점수를 도출하고 시각화했습니다.",
+    tags: ["Python","JMP", "Geopandas", "QGIS"],
+    color: "bg-indigo-50",
+    image: subwayImage,
+    objectFit: "cover"
   },
   {
     id: 5,
