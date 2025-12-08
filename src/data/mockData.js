@@ -14,7 +14,7 @@ import Choi from '../assets/image/Choi_image.jpg';
 export const PROFILE_DATA = {
   name: "최창연 (ChangYun Choi)",
   jobTitle: "Full-Stack Developer & Data Analyst",
-  description: "사용자 경험과 비즈니스 가치를 극대화하는 솔루션을 개발합니다. AI 기반 추천 시스템과 데이터 분석 역량을 기반으로 실제 문제 해결에 기여하는 프로덕트 개발에 주력하고 있습니다.",
+  description: "데이터와 AI로 사용자 경험과 비즈니스 성과를 동시에 개선하는 Product를 만들고 있습니다. AI 기반 추천 시스템과 데이터 분석 역량을 활용해, 실제 서비스의 문제를 구체적으로 해결하는 데 주력합니다.",
   email: "portfolio0704@naver.com",
   phone: "010-3048-3452",
   location: "Seoul, Republic of Korea",
