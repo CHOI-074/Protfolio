@@ -44,7 +44,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
 
         {/* Social / Contact */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="#" className="p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-all">
+          <a href="https://github.com/CHOI-074/Protfolio" className="p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-all">
             <Github size={20} />
           </a>
           <button className="text-sm font-semibold text-gray-900 border-b-2 border-transparent hover:border-black transition-all">

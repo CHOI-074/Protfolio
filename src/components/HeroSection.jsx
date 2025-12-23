@@ -4,13 +4,11 @@ import FeaturedWorksSlider from './FeaturedWorksSlider';
 
 // handleScrollToProject 함수를 props로 받습니다.
 const HeroSection = ({ handleScrollToProject }) => {
-  // 모드 상태: 'profile' 또는 'featured'
   const [mode, setMode] = useState('profile'); 
 
   return (
     <div className="relative w-full overflow-hidden bg-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-end">
-        
         {/* 모드 선택 탭 */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <h2 className="text-2xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">Developer Archive</h2>
@@ -36,8 +34,7 @@ const HeroSection = ({ handleScrollToProject }) => {
               Featured Works
             </button>
           </div>
-        </div>
-        
+        </div>        
         {/* Featured Works 모드일 때만 표시되는 부가 정보 */}
         {mode === 'featured' && (
           <div className="mt-4 md:mt-0">
@@ -54,6 +51,5 @@ const HeroSection = ({ handleScrollToProject }) => {
     </div>
   );
 };
-
 
 export default HeroSection;

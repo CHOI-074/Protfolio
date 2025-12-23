@@ -11,7 +11,7 @@ const ProjectList = ({ projectRefs }) => {
           <h3 className="text-3xl font-bold text-gray-900">All Projects</h3>
           <span className="font-mono text-sm text-gray-400">Total {ALL_PROJECTS.length}</span>
         </div>
-
+        
         <div className="space-y-32">
           {/* 각 프로젝트에 projectRefs를 연결하여 참조 가능하도록 설정 */}
           {ALL_PROJECTS.map((project, idx) => (
