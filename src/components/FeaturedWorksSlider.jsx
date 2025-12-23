@@ -78,6 +78,7 @@ const FeaturedWorksSlider = () => {
           ))}
         </div>
       </div>
+      
     </>
   );
 };

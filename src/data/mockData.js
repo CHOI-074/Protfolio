@@ -123,4 +123,3 @@ export const TEMPLATES = [
   { id: 5, title: "App Showcase", type: "Mobile", price: "$19", bg: "bg-red-50" },
   { id: 6, title: "Admin Starter", type: "Dashboard", price: "$39", bg: "bg-indigo-50" },
 ];
-

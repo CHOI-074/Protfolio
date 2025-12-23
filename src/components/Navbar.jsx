@@ -30,16 +30,6 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           >
             Projects
           </button>
-          {/* <button
-            onClick={() => setActiveTab('templates')}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
-              activeTab === 'templates' 
-                ? 'bg-white text-black shadow-sm' 
-                : 'text-gray-500 hover:text-gray-800'
-            }`}
-          >
-            Templates
-          </button> */}
         </div>
 
         {/* Social / Contact */}
