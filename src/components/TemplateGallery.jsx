@@ -18,9 +18,12 @@ const TemplateGallery = () => {
           </h2>
           <p className="text-lg text-gray-500">
             실용적이고 모던한 UI 키트와 웹 템플릿 컬렉션입니다.<br/>
-            모든 템플릿은 반응형을 지원하며 커스터마이징이 용이합니다.
+            모든 템플릿은 반응형을 지원하며 커스터마이징이 용이합니다
           </p>
         </div>
+
+// 템플릿 그리드
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {TEMPLATES.map((template) => (
