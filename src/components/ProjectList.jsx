@@ -64,7 +64,7 @@ const ProjectList = ({ projectRefs }) => {
                   <a href="#" className="flex items-center gap-2 text-sm font-bold text-black border-b border-black pb-0.5 hover:text-gray-600 hover:border-gray-600 transition-colors">
                     View Project
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-black transition-colors">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-black transition-colors">
                     <Github size={16} /> Code
                   </a>
                 </div>

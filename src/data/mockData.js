@@ -35,7 +35,8 @@ export const PROFILE_PROJECTS = [
     title: "슬기로운 은퇴생활", 
     year: "2025", 
     description: "5060 은퇴자를 위한 AI 기반 지역 정착 매칭 플랫폼 개발",
-    badge: "KDT 해커톤 장관상 수상작"
+    badge: "KDT 해커톤 장관상 수상작",
+    url : "https://github.com/kdt-hackathon-2025/Frontend"
   },
   { 
     id: 1, // ALL_PROJECTS의 'UZET' ID
@@ -48,7 +49,8 @@ export const PROFILE_PROJECTS = [
     id: 3, // ALL_PROJECTS의 'FINZ' ID
     title: "FINZ", 
     year: "2025", 
-    description: "MZ세대를 위한 AI 기반 맞춤형 금융 입문 플랫폼 개발 및 모의투자 시스템 구현" 
+    description: "MZ세대를 위한 AI 기반 맞춤형 금융 입문 플랫폼 개발 및 모의투자 시스템 구현" ,
+    url : "https://github.com/KB-PROJECT-FINZ"
   },
   { 
     id: 4, // ALL_PROJECTS의 'Metro Site Analysis' ID
