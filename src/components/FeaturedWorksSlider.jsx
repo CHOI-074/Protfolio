@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, ArrowRight, Monitor } from 'lucide-react';
 // mockData.js에서 데이터를 임포트합니다.
 import { HIGHLIGHT_PROJECTS } from '../data/mockData';
 
-const FeaturedWorksSlider = () => {
+const FeaturedWorksSlider = ({ handleScrollToProject }) => {
   const [current, setCurrent] = useState(0);
 
   // 슬라이드 이동 로직
@@ -15,17 +15,17 @@ const FeaturedWorksSlider = () => {
       {/* 슬라이더 버튼 영역 */}
       <div className="max-w-7xl mx-auto px-6 mb-8 flex justify-end items-end">
         <div className="flex gap-2">
-          <button onClick={prev} className="p-3 rounded-full border border-gray-200 hover:bg-black hover:text-white hover:border-black transition-all">
+          <button onClick={prev} aria-label="이전 프로젝트" className="p-3 rounded-full border border-gray-200 hover:bg-black hover:text-white hover:border-black transition-all">
             <ChevronLeft size={20} />
           </button>
-          <button onClick={next} className="p-3 rounded-full border border-gray-200 hover:bg-black hover:text-white hover:border-black transition-all">
+          <button onClick={next} aria-label="다음 프로젝트" className="p-3 rounded-full border border-gray-200 hover:bg-black hover:text-white hover:border-black transition-all">
             <ChevronRight size={20} />
           </button>
         </div>
       </div>
 
       {/* 슬라이드 컨테이너 */}
-      <div className="w-full relative h-[500px]">
+      <div className="w-full relative h-[720px] md:h-[500px]">
         <div 
           className="absolute inset-0 flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
           style={{ transform: `translateX(-${current * 100}%)` }}
@@ -35,18 +35,21 @@ const FeaturedWorksSlider = () => {
               <div className={`w-full max-w-7xl h-full rounded-3xl ${project.color} flex flex-col md:flex-row overflow-hidden relative group`}>
                 
                 {/* 내용 영역 */}
-                <div className="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center z-10">
+                <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center z-10">
                   <span className="inline-block px-3 py-1 rounded-full bg-white/60 backdrop-blur border border-white/20 text-xs font-bold text-gray-600 mb-6 w-fit">
                     {project.category}
                   </span>
                   <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                     {project.title}
                   </h1>
-                  <p className="text-gray-600 text-lg mb-8 max-w-md">
+                  <p className="text-gray-600 text-base md:text-lg mb-8 max-w-md">
                     {project.description}
                   </p>
-                  <button className="flex items-center gap-2 text-black font-bold group-hover:gap-4 transition-all">
-                    Explore Case Study <ArrowRight size={18} />
+                  <button
+                    onClick={() => handleScrollToProject(project.id)}
+                    className="flex items-center gap-2 text-black font-bold group-hover:gap-4 transition-all"
+                  >
+                    자세히 보기 <ArrowRight size={18} />
                   </button>
                 </div>
 

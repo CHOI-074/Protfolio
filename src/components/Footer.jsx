@@ -1,16 +1,16 @@
 import React from 'react';
+import { PROFILE_DATA } from '../data/mockData';
 
 const Footer = () => (
   <footer className="bg-white border-t border-gray-100 py-16">
-    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-      <div className="mb-4 md:mb-0">
-        <h4 className="font-bold text-xl tracking-tight mb-2">DEV.ARCHIVE</h4>
-        <p className="text-sm text-gray-400">Built with React & Tailwind CSS</p>
+    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="text-center md:text-left">
+        <h4 className="font-bold text-xl tracking-tight mb-2">CHANGYUN CHOI</h4>
+        <p className="text-sm text-gray-400">AI · ML Engineer — 추천 시스템 · LLM 애플리케이션</p>
       </div>
       <div className="flex gap-8 text-sm font-medium text-gray-500">
-        <a href="#" className="hover:text-black transition-colors">GitHub</a>
-        <a href="#" className="hover:text-black transition-colors">LinkedIn</a>
-        <a href="#" className="hover:text-black transition-colors">Email</a>
+        <a href={PROFILE_DATA.github} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">GitHub</a>
+        <a href={`mailto:${PROFILE_DATA.email}`} className="hover:text-black transition-colors">Email</a>
       </div>
     </div>
   </footer>
