@@ -1,39 +1,58 @@
 // ==========================================
-// [File: src/App.jsx] - 메인 애플리케이션 컴포넌트
+// [File: src/App.jsx] - 해시 라우팅 (GitHub Pages 등 정적 호스팅에서 새로고침해도 동작)
+//   #/                         홈
+//   #/projects                 홈 > 프로젝트 섹션
+//   #/projects/:slug           케이스 스터디
+//   #/projects/:slug/:section  케이스 스터디 > 섹션
 // ==========================================
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import ProjectList from './components/ProjectList';
 import Footer from './components/Footer';
+import Home from './components/Home';
+import CaseStudy from './components/CaseStudy';
+import { findProject } from './data/projects';
+
+const BASE_TITLE = '최창연 | AI · ML Engineer Portfolio';
+
+const parse = () => {
+  const parts = window.location.hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+  return { parts };
+};
 
 const App = () => {
-  // 프로젝트 ID를 키로 해당 DOM 엘리먼트를 저장
-  const projectRefs = useRef({});
+  const [route, setRoute] = useState(parse);
 
-  const handleScrollToProject = (projectId) => {
-    const element = projectRefs.current[projectId];
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  useEffect(() => {
+    const onChange = () => setRoute(parse());
+    window.addEventListener('hashchange', onChange);
+    return () => window.removeEventListener('hashchange', onChange);
+  }, []);
+
+  const [first, slug, section] = route.parts;
+  const project = first === 'projects' && slug ? findProject(slug) : null;
+
+  useEffect(() => {
+    document.title = project ? `${project.title} — ${BASE_TITLE}` : BASE_TITLE;
+    const target = project ? section : first === 'projects' ? 'projects' : null;
+    requestAnimationFrame(() => {
+      const el = target && document.getElementById(target);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      else window.scrollTo({ top: 0 });
+    });
+  }, [first, slug, section, project]);
 
   return (
     <>
       <style>{`
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-        html { scroll-behavior: smooth; }
         body, html, * {
           font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif !important;
         }
-        [id^="project-"] { scroll-margin-top: 96px; }
+        pre, code, .font-mono, .font-mono * { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !important; }
       `}</style>
-      <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-gray-900 selection:text-white">
+      <div className="min-h-screen bg-white text-gray-900 selection:bg-gray-900 selection:text-white">
         <Navbar />
-        <main>
-          <HeroSection handleScrollToProject={handleScrollToProject} />
-          <ProjectList projectRefs={projectRefs} />
-        </main>
+        <main>{project ? <CaseStudy project={project} /> : <Home />}</main>
         <Footer />
       </div>
     </>

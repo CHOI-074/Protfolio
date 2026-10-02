@@ -3,7 +3,7 @@ import { PROFILE_DATA } from '../data/mockData';
 
 const Footer = () => (
   <footer className="bg-white border-t border-gray-100 py-16">
-    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <div className="text-center md:text-left">
         <h4 className="font-bold text-xl tracking-tight mb-2">CHANGYUN CHOI</h4>
         <p className="text-sm text-gray-400">AI · ML Engineer — 추천 시스템 · LLM 애플리케이션</p>
