@@ -1,5 +1,5 @@
 import React from 'react';
-import { Command, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { PROFILE_DATA } from '../data/mockData';
 
 const Navbar = () => {
@@ -8,9 +8,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12">
-            <Command size={16} />
-          </div>
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" className="w-8 h-8 transition-transform group-hover:rotate-12" />
           <span className="font-bold text-lg tracking-tight">CHANGYUN CHOI</span>
         </a>
 
@@ -30,6 +28,14 @@ const Navbar = () => {
             className="p-2 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition-all"
           >
             <Github size={20} />
+          </a>
+          <a
+            href={PROFILE_DATA.velog}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline text-sm font-semibold text-gray-500 hover:text-black transition-colors"
+          >
+            Blog
           </a>
           <a
             href={`mailto:${PROFILE_DATA.email}`}

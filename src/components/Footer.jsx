@@ -10,6 +10,7 @@ const Footer = () => (
       </div>
       <div className="flex gap-8 text-sm font-medium text-gray-500">
         <a href={PROFILE_DATA.github} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">GitHub</a>
+        <a href={PROFILE_DATA.velog} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Velog</a>
         <a href={`mailto:${PROFILE_DATA.email}`} className="hover:text-black transition-colors">Email</a>
       </div>
     </div>

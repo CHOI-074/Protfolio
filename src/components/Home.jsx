@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ArrowUpRight, Award, Github, Mail, MapPin, Activity } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Award, Github, Mail, MapPin, Activity, PenLine } from 'lucide-react';
 import { PROFILE_DATA, PRINCIPLES, NOW, SKILLS, CERTIFICATIONS } from '../data/mockData';
 import { PROJECTS } from '../data/projects';
 import { StatusPill } from './ui';
@@ -80,6 +80,9 @@ const Home = () => (
             </a>
             <a href={PROFILE_DATA.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-gray-300 font-semibold px-5 py-3 rounded-full hover:border-gray-900">
               <Github size={16} /> GitHub
+            </a>
+            <a href={PROFILE_DATA.velog} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border border-gray-300 font-semibold px-5 py-3 rounded-full hover:border-gray-900">
+              <PenLine size={16} /> 기술 블로그
             </a>
             <a href={`mailto:${PROFILE_DATA.email}`} className="inline-flex items-center gap-2 border border-gray-300 font-semibold px-5 py-3 rounded-full hover:border-gray-900">
               <Mail size={16} /> 연락하기

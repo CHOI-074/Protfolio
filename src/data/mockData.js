@@ -13,6 +13,7 @@ export const PROFILE_DATA = {
     '사용자 행동 데이터로 "지금 필요한 것"을 고르는 추천 시스템과, 문서 근거로만 답하는 LLM 애플리케이션을 만듭니다. 금융 도메인에서 Implicit ALS 하이브리드 추천과 RAG 파이프라인을 설계·구현했고, Spring·Vue 풀스택 경험으로 모델 결과가 API와 화면까지 닿는 경로를 직접 연결합니다.',
   email: 'portfolio0704@naver.com',
   github: 'https://github.com/CHOI-074',
+  velog: 'https://velog.io/@choi0704/',
   location: 'Seoul, Korea',
   profileImage: Choi,
 };
